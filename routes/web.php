@@ -1,7 +1,8 @@
 <?php
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\BarangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class,'index'] );
+
+Route::controller(CustomerController::class)->prefix("Customer")->group(function () {
+    Route::get('/', 'index');
+    Route::post('/', 'Store');
+    Route::get('/create', 'create');
+    Route::get('/{id}', 'show');
+    Route::put('/{id}', 'update');
+    Route::delete('/{id}', 'destroy');
+    Route::get('/{id}/edit', 'edit');
+});
