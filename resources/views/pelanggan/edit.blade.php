@@ -31,7 +31,11 @@
                     <input class="form-control" type="text" name="notelp" value="{{ $data->notelp }}">
                 </div>
                 <div>
-                 
+                    <label class="form-label">Jenis Barang</label>
+                    <select class="form-select" name="jenisbuku">
+                        @foreach ($jenisbarang as $j)
+                            <option {{ $data->jenisbarang_id == $j->id ? 'selected' : '' }} value="{{ $j->id }}">{{ $j->nama }}</option>
+                        @endforeach
                     </select>
                 </div>
 

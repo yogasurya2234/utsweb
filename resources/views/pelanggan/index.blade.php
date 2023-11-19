@@ -33,7 +33,8 @@
                         <tr>
                             <td>{{ $d->idpelanggan }}</td>
                             <td>{{ $d->nama }}</td>
-                            <td>{{ $d->notelp }}</td>
+                            <td>{{ $d->notelp }}</td>\
+                            <td>{{ $d->jenisbarang_nama }}</td>
                             <td class="float-end">
                                 <a class="btn btn-sm btn-warning"
                                     href="{{ url('/pelanggan/' . $d->id . '/edit') }}">Ubah</a>

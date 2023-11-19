@@ -30,6 +30,13 @@
                     <input class="form-control" type="text" name="harga">
                 </div>
                 <div>
+                    <label class="form-label">Jenis Barang</label>
+                    <select class="form-select" name="jenisbarang">
+                        @foreach ($jenisbarang as $j)
+                            <option value="{{ $j->id }}">{{ $j->nama }}</option>
+                        @endforeach
+                    </select>
+                </div>
             
 
             </div>

@@ -35,6 +35,7 @@
                             <td>{{ $db->idbarang }}</td>
                             <td>{{ $db->nama }}</td>
                             <td>{{ $db->harga }}</td>
+                            <td>{{ $db->jenisbarang_nama }}</td>
                             <td class="float-end">
                                 <a class="btn btn-sm btn-warning"
                                     href="{{ url('/barang/' . $db->id . '/edit') }}">Ubah</a>

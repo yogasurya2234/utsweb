@@ -18,6 +18,7 @@
                   <p class="card-text">ID pelanggan :{{ $data->idpelanggan }}</p>
                   <p class="card-text">Nama : {{ $data->nama }}</p>
                   <p class="card-text">No Telephone: {{ $data->notelp }}</p>
+                  <p class="card-text">Jenis Barang: {{ $data->jenisbarang_nama }}</p>
                   <a class="btn btn-sm btn-info" href="{{ url('/pelanggan/') }}">Back</a>
               
             </div>

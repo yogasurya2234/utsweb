@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('idpelanggan')->unique();
             $table->string('nama');
             $table->string('notelp');
+            $table->foreignId('jenisbarang_id');
             $table->timestamps();
             
         });
