@@ -1,8 +1,8 @@
 <?php
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\BarangController;
+use App\Http\Controllers\pelangganController;
+use App\Http\Controllers\barangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +16,19 @@ use App\Http\Controllers\BarangController;
 
 Route::get('/', [HomeController::class,'index'] );
 
-Route::controller(CustomerController::class)->prefix("Customer")->group(function () {
+Route::controller(pelangganController::class)->prefix("pelanggan")->group(function () {
     Route::get('/', 'index');
-    Route::post('/', 'Store');
+    Route::post('/', 'store');
+    Route::get('/create', 'create');
+    Route::get('/{id}', 'show');
+    Route::put('/{id}', 'update');
+    Route::delete('/{id}', 'destroy');
+    Route::get('/{id}/edit', 'edit');
+});
+
+Route::controller(barangController::class)->prefix("barang")->group(function () {
+    Route::get('/', 'index');
+    Route::post('/', 'store');
     Route::get('/create', 'create');
     Route::get('/{id}', 'show');
     Route::put('/{id}', 'update');
